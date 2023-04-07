@@ -6,13 +6,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_i"
     tools:context=".Payments">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@drawable/backwallet"
-        app:cardBackgroundColor="#232325"
         android:gravity="center"
-        app:cardCornerRadius="25dp">
+        app:cardBackgroundColor="#232325"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
@@ -27,20 +32,19 @@
             app:srcCompat="@drawable/backwallet" />
 
 
-
         <TextView
 
+            android:id="@+id/insta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alike"
-            android:id="@+id/insta"
-            android:layout_marginTop="75dp"
             android:layout_gravity="center_horizontal"
-            android:textSize="45sp"
-            android:text="InstaWallet"
+            android:layout_marginTop="75dp"
             android:drawableStart="@drawable/baseline_charging_station_24"
             android:drawablePadding="8dp"
-            android:textColor="@color/white"/>
+            android:fontFamily="@font/alike"
+            android:text="InstantWallet"
+            android:textColor="@color/white"
+            android:textSize="45sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
