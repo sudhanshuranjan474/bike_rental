@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class DashBoard extends AppCompatActivity implements View.OnContextClickListener, View.OnClickListener {
@@ -29,7 +30,11 @@ payment_cardview.setOnClickListener(this);
         Intent i;
         switch (view.getId())
         {
-            case R.id.payment_cardview:i=new Intent(this,Payments.class);startActivity(i);
+            case R.id.payment_cardview:
+                    i=new Intent(this, Payments.class);
+                Log.d("tagcheck1","activity start");
+            startActivity(i);
+
             break;
             default:break;
         }
