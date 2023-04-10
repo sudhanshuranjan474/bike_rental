@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="14dp"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+
+        android:orientation="horizontal"
+        android:background="@color/recycler_view_item"
+
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+
+
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/bikeimage"
+                tools:src="@drawable/bikeimage" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/rent_vehicle_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:text="Bugati chrion"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/rent_vehicle_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Petrol | 50km/l"
+
+                android:textColor="#6C6E77"/>
+
+            <TextView
+                android:id="@+id/rent_vehicle_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Sundar Nagar, Ratnagiri"
+                android:layout_gravity="center_vertical"
+                android:textColor="#6C6E77"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/location" />
+        </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/style_layout_1"
+
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+
+            <TextView
+                android:id="@+id/rent_vehicle_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:text="350 /day"
+                android:textSize="19sp"
+                android:textStyle="bold"
+
+                android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

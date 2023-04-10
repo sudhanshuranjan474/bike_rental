@@ -55,7 +55,6 @@ public class Payments extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot data: snapshot.getChildren())
                 {
-                    Log.d("database.addValueEventListener(new ValueEventListener", data.toString());
                     Transactions transactions = data.getValue(Transactions.class);
                     list.add(transactions);
                 }

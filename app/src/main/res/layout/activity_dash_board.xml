@@ -173,6 +173,7 @@
             android:layout_weight="1">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nearest_cardview"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
@@ -231,6 +232,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:id="@+id/premium_bikes_cardview"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -251,7 +253,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/alike"
-                        android:text="Nearest Bike"
+                        android:text="Super Bike"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -299,6 +301,7 @@
             android:gravity="center"
             android:layout_weight="1">
             <androidx.cardview.widget.CardView
+                android:id="@+id/mileage_card_view"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -320,7 +323,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/alike"
-                        android:text="Nearest Bike"
+                        android:text="Best Mileage"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -358,6 +361,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:id="@+id/affordable_cardview"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -378,7 +382,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/alike"
-                        android:text="Nearest Bike"
+                        android:text="Affordable"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 

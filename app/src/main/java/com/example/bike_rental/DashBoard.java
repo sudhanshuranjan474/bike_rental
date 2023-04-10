@@ -3,21 +3,35 @@ package com.example.bike_rental;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 public class DashBoard extends AppCompatActivity implements View.OnContextClickListener, View.OnClickListener {
-private CardView payment_cardview;
+    private CardView payment_cardview;
+    private CardView nearest_cardview;
+    private CardView premium_bikes_cardview;
+    private CardView mileage_card_view;
+    private CardView affordable_cardview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
         getSupportActionBar().hide();
         payment_cardview=findViewById(R.id.payment_cardview);
+        nearest_cardview=findViewById(R.id.nearest_cardview);
+        premium_bikes_cardview=findViewById(R.id.premium_bikes_cardview);
+        mileage_card_view= findViewById(R.id.mileage_card_view);
+        affordable_cardview=findViewById(R.id.affordable_cardview);
 
-payment_cardview.setOnClickListener(this);
+
+        payment_cardview.setOnClickListener(this);
+        nearest_cardview.setOnClickListener(this);
+        premium_bikes_cardview.setOnClickListener(this);
+        mileage_card_view.setOnClickListener(this);
+        affordable_cardview.setOnClickListener(this);
     }
 
     @Override
@@ -25,6 +39,7 @@ payment_cardview.setOnClickListener(this);
         return false;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         Intent i;
@@ -32,10 +47,34 @@ payment_cardview.setOnClickListener(this);
         {
             case R.id.payment_cardview:
                     i=new Intent(this, Payments.class);
-                Log.d("tagcheck1","activity start");
             startActivity(i);
 
             break;
+
+            case R.id.nearest_cardview:
+                i=new Intent(this, Renting_Activity.class);
+                // sending rentype to Renting_activity
+                i.putExtra("rentType","Nearest Bikes");
+                startActivity(i);
+            break;
+            case R.id.premium_bikes_cardview:
+                i=new Intent(this, Renting_Activity.class);
+                //sending rentype to Renting_activity
+                i.putExtra("rentType", "Super Bikes");
+                startActivity(i);
+                break;
+            case R.id.mileage_card_view:
+                i=new Intent(this, Renting_Activity.class);
+                //sending rentype to Renting_activity
+                i.putExtra("rentType", "Best Mileage");
+                startActivity(i);
+                break;
+            case R.id.affordable_cardview:
+                i=new Intent(this, Renting_Activity.class);
+                //sending rentype to Renting_activity
+                i.putExtra("rentType", "Affordable Bikes");
+                startActivity(i);
+                break;
             default:break;
         }
     }
