@@ -225,7 +225,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
             android:layout_marginBottom="15dp"
-            android:text="Additional"/>
+            android:text="Aadhar Number"/>
 
         <EditText
 
@@ -237,7 +237,33 @@
             android:textColor="@color/white"
             android:inputType="textPersonName"
             android:textColorHint="@color/grey"
-            android:hint="Additional details"/>
+            android:hint="Enter Aadhar Number"/>
+
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="15dp"
+            android:text="License Details"/>
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:padding="5dp"
+            android:background="@drawable/input_background1"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/grey"
+            android:hint="license Details"/>
 
     </LinearLayout>
     </LinearLayout>
