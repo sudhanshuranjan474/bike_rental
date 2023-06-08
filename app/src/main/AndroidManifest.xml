@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Bike_rental"
         tools:targetApi="31">
         <activity
+            android:name=".Update_Profile"
+            android:exported="false" />
+        <activity
             android:name=".Renting_Activity"
             android:exported="false" />
         <activity

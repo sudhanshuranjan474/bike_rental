@@ -429,6 +429,7 @@
             android:layout_weight="1"
             android:gravity="center">
             <androidx.cardview.widget.CardView
+                android:id="@+id/profile"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -451,7 +452,6 @@
     app:cardCornerRadius="15dp">
     <ImageView
         android:id="@+id/profile_pic"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
