@@ -17,6 +17,7 @@ public class DashBoard extends AppCompatActivity implements View.OnContextClickL
     private CardView mileage_card_view;
     private CardView affordable_cardview;
     private CardView profile_cardview;
+    private CardView settings_cardview;
     private ImageView profile_Image;
 
 
@@ -32,6 +33,8 @@ public class DashBoard extends AppCompatActivity implements View.OnContextClickL
         affordable_cardview=findViewById(R.id.affordable_cardview);
         profile_cardview = findViewById(R.id.profile);
         profile_Image = findViewById(R.id.profile_pic);
+        settings_cardview=findViewById(R.id.dash_board_setting);
+
 
         payment_cardview.setOnClickListener(this);
         nearest_cardview.setOnClickListener(this);
@@ -40,6 +43,7 @@ public class DashBoard extends AppCompatActivity implements View.OnContextClickL
         affordable_cardview.setOnClickListener(this);
         profile_cardview.setOnClickListener(this);
         profile_Image.setOnClickListener(this);
+        settings_cardview.setOnClickListener(this);
     }
 
     @Override
@@ -88,6 +92,11 @@ public class DashBoard extends AppCompatActivity implements View.OnContextClickL
                 i=new Intent(this, Profile.class);
                 startActivity(i);
                 break;
+
+            case R.id.dash_board_setting:
+                i=new Intent(this, Settings_Activity.class);
+                startActivity(i);
+             break;
 
             default:break;
         }

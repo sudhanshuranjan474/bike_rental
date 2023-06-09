@@ -57,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="2dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
 
                 <TextView
@@ -70,11 +70,13 @@
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="bold" />
+
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:orientation="vertical">
 
 
@@ -83,9 +85,16 @@
                     android:layout_gravity="end"
                     android:layout_height="100dp"
                     android:src="@drawable/img"
+                    android:layout_marginEnd="10dp"
                     />
-            </LinearLayout>
 
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_marginEnd="10dp"
+                />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -165,7 +174,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="near Bima Hospital,\n Bhopal,\nM.P.,\n462022"
+                                android:text="near Bima Hospital, Bhopal,M.P"
+                                android:textSize="13sp"
+                                android:textColor="@color/grey"
+                                android:textStyle="normal"
+                                android:gravity="center"
+                                android:textAlignment="textStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="RtlCompat" />
+                            <TextView
+                                android:text="462022"
                                 android:textSize="13sp"
                                 android:textColor="@color/grey"
                                 android:textStyle="normal"
@@ -278,6 +297,104 @@
 
                     <TextView
                         android:text="Company_12345@gmail.com"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#13171A"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:padding="3dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginStart="5dp"
+                            android:padding="2dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_document_24"/>
+                        <TextView
+                            android:text="Aadhar Number"
+                            android:layout_marginStart="10dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="234862387"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#13171A"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:padding="3dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginStart="5dp"
+                            android:padding="2dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_car_rental_24"/>
+                        <TextView
+                            android:text="License Number"
+                            android:layout_marginStart="10dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="4345g4545h3"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:layout_marginStart="25dp"

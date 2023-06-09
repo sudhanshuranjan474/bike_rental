@@ -138,6 +138,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/dash_board_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
@@ -149,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:src="@drawable/filter" />
+                android:src="@drawable/baseline_settings_24" />
 
 
 
