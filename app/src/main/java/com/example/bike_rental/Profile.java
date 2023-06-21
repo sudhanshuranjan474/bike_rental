@@ -14,7 +14,7 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        getSupportActionBar().hide();
+
 
         profile_back_btn = findViewById(R.id.profile_back);
         profile_back_btn.setOnClickListener(new View.OnClickListener() {

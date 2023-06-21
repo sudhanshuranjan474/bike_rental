@@ -14,7 +14,6 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        getSupportActionBar().hide();
 
         Thread td =new Thread(){
             public void run(){

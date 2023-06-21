@@ -25,7 +25,7 @@ public class DashBoard extends AppCompatActivity implements View.OnContextClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
-        getSupportActionBar().hide();
+
         payment_cardview=findViewById(R.id.payment_cardview);
         nearest_cardview=findViewById(R.id.nearest_cardview);
         premium_bikes_cardview=findViewById(R.id.premium_bikes_cardview);

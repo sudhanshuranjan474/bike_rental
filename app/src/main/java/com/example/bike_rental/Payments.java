@@ -31,7 +31,7 @@ public class Payments extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payments);
-        getSupportActionBar().hide();
+
 
         //initializing recycler view
         recyclerView= findViewById(R.id.account_recycler_view);

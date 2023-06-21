@@ -11,7 +11,6 @@ public class Update_Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_profile);
-        getSupportActionBar().hide();
 
         findViewById(R.id.profileUpdate_back).setOnClickListener(new View.OnClickListener() {
             @Override

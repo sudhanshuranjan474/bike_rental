@@ -10,21 +10,24 @@ import android.widget.TextView;
 
 import com.example.bike_rental.Adapters.RentVehicleListAdapter;
 import com.example.bike_rental.Adapters.TransactionListAdapter;
+import com.example.bike_rental.Interfaces.RentingRecyclerViewInterface;
 import com.example.bike_rental.data_class.RentVehicleData;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Renting_Activity extends AppCompatActivity {
+public class Renting_Activity extends AppCompatActivity  implements RentingRecyclerViewInterface {
+
+
 
     RecyclerView recyclerView;
     RentVehicleListAdapter adapter;
-
+    ArrayList<RentVehicleData> list=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_renting);
-        getSupportActionBar().hide();
+
 
         // taking data from dashboard activity
         Intent intent=getIntent();
@@ -49,24 +52,24 @@ public class Renting_Activity extends AppCompatActivity {
 
         if(rentType.equals("Nearest Bikes"))
         {
-            adapter=new RentVehicleListAdapter(this,convertToList(nearestBikeName));
+            adapter=new RentVehicleListAdapter(this,convertToList(nearestBikeName),this);
         }
         else if(rentType.equals("Super Bikes"))
         {
-            adapter=new RentVehicleListAdapter(this,convertToList(superBikeNames));
+            adapter=new RentVehicleListAdapter(this,convertToList(superBikeNames),this);
         }
         else if(rentType.equals("Best Mileage")){
-            adapter=new RentVehicleListAdapter(this,convertToList(highMileageBikeNames));
+            adapter=new RentVehicleListAdapter(this,convertToList(highMileageBikeNames),this);
         }
         else{
-            adapter=new RentVehicleListAdapter(this,convertToList(localBikeNames));
+            adapter=new RentVehicleListAdapter(this,convertToList(localBikeNames),this);
         }
         recyclerView.setAdapter(adapter);
     }
     private ArrayList<RentVehicleData> convertToList(String[] li)
     {
         Random random=new Random();
-        ArrayList<RentVehicleData> list=new ArrayList<>();
+
         for (String str:li)
         {
             RentVehicleData vehicleData=new RentVehicleData();
@@ -79,5 +82,12 @@ public class Renting_Activity extends AppCompatActivity {
 
         }
         return list;
+    }
+
+    @Override
+    public void onItemClick(int position) {
+    Intent intent =new Intent(this,BookingPanel.class);
+    intent.putExtra("item",list.get(position).getVehicle());
+    startActivity(intent);
     }
 }

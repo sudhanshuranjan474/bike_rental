@@ -12,12 +12,19 @@ public class Settings_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        getSupportActionBar().hide();
+
 
         findViewById(R.id.setting_back_arrow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        findViewById(R.id.Setting_support).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Settings_Activity.this,support.class));
             }
         });
 
