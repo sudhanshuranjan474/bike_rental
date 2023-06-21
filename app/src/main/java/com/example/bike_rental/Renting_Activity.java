@@ -22,12 +22,14 @@ public class Renting_Activity extends AppCompatActivity  implements RentingRecyc
 
     RecyclerView recyclerView;
     RentVehicleListAdapter adapter;
-    ArrayList<RentVehicleData> list=new ArrayList<>();
+    ArrayList<RentVehicleData> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_renting);
 
+//       Initializing ArrayList
+        list=new ArrayList<>();
 
         // taking data from dashboard activity
         Intent intent=getIntent();

@@ -14,6 +14,7 @@ public class BookingPanel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_panel);
 
+        findViewById(R.id.Booking_panel_back).setOnClickListener(view -> onBackPressed());
         textView = findViewById(R.id.sample_Txt);
         textView.setText(getIntent().getStringExtra("item"));
     }
