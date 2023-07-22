@@ -10,5 +10,6 @@
     <color name="recycler_view_item">#13171A</color>
     <color name="price_red">#FF2222</color>
     <color name="grey">#B2B2B2</color>
+    <color name="Background">#201A30</color>
     <color name="Black_mid">#13171A</color>
 </resources>

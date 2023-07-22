@@ -34,11 +34,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             >
             <LinearLayout
@@ -56,7 +56,7 @@
                     >
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="@dimen/_200sdp"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginEnd="@dimen/_10sdp"
                         android:src="@drawable/img"/>
@@ -143,12 +143,12 @@
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/engine_svg" />
+                            android:src="@drawable/speed" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Engine"
+                            android:text="Speed"
                             android:textSize="@dimen/_15ssp"
                             android:layout_gravity="center"
                             />
@@ -171,15 +171,15 @@
                         >
 
                         <ImageView
-                            android:layout_width="@dimen/_50sdp"
+                            android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/engine_svg" />
+                            android:src="@drawable/gps" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Engine"
+                            android:text="GPS"
                             android:textSize="@dimen/_15ssp"
                             android:layout_gravity="center"
                             />
@@ -202,22 +202,22 @@
                         >
 
                         <ImageView
-                            android:layout_width="@dimen/_50sdp"
+                            android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/engine_svg" />
+                            android:src="@drawable/petrol" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Engine"
+                            android:text="Mileage"
                             android:textSize="@dimen/_15ssp"
                             android:layout_gravity="center"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="400cc"
+                            android:text="50km"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_18ssp"
@@ -233,22 +233,22 @@
                         >
 
                         <ImageView
-                            android:layout_width="@dimen/_50sdp"
+                            android:layout_width="@dimen/_40sdp"
                             android:layout_height="@dimen/_50sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/engine_svg" />
+                            android:src="@drawable/selfstartsvg" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Engine"
+                            android:text="Self"
                             android:textSize="@dimen/_15ssp"
                             android:layout_gravity="center"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="400cc"
+                            android:text="Enable"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_18ssp"
@@ -258,17 +258,103 @@
 
                 </LinearLayout>
             </HorizontalScrollView>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        >
+                        <Button
+                            android:id="@+id/btnDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/btn_aap_2"
+                            android:textAlignment="textStart"
+                           android:drawableStart="@drawable/calendar"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:padding="10dp"
+                            android:textSize="@dimen/_11ssp"
+                            android:textAllCaps="false"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:text="From date"
+                            android:textColor="@android:color/white" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/btn_aap_2"
+                            android:textAlignment="textStart"
+                            android:drawableStart="@drawable/calendar"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:padding="10dp"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_11ssp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:text="To date"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1.5"
+                        android:padding="@dimen/_10sdp"
+
+                        >
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+
+                            android:background="@drawable/btn_aap_2"
+                            android:textAlignment="textStart"
+                            android:drawableStart="@drawable/time"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:padding="10dp"
+                            android:textSize="@dimen/_11ssp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:text="From Time"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/btn_aap_2"
+                            android:textAlignment="textStart"
+                            android:drawableStart="@drawable/time"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:padding="10dp"
+                            android:textSize="@dimen/_11ssp"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:text="To Time"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
+
                     android:layout_margin="@dimen/_10sdp"
                     >
                     <androidx.appcompat.widget.AppCompatButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Pay 500"
+                        android:text="Book 500"
+
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textAlignment="center"
